@@ -8,7 +8,7 @@ util = require 'util'
 colors = require 'colors'
 rapid = require 'rapid'
 request = require 'request'
-{gist} = require 'gist'
+# {gist} = require 'gist'
 
 {Hit} = require './hit'
 
@@ -59,7 +59,7 @@ server = http.createServer (request, response) ->
       deny 'host'
       return
 
-  console.log "#{request.connection.remoteAddress} #{request.method} #{gist(request.url)}"
+  console.log "#{request.connection.remoteAddress} #{request.method} #{request.url}"
   proxy = http.createClient url.parse(request.url).port || 80, request.headers.host
   proxy_request = proxy.request request.method, request.url, request.headers
   proxy_request.addListener 'response', (proxy_response) ->
