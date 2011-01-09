@@ -30,8 +30,6 @@ init = (db) ->
         memory: ->
           process.memoryUsage()
         db: db
-        init: ->
-          db.ip['192.168.0.1'] = true
         exit: (code) ->
           process.exit code
         fake: (n) ->
