@@ -43,7 +43,9 @@
   
   dependencies:
     'coffee-script': '>= 1.0.0'
+    'colors': '*'
+    'rapid': '*'
   
   engines:
-    node: '>= 0.3.3'
+    node: '>= 0.3.5'
 }
